@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Eco Startpage</title>
+  <link rel="stylesheet" href="assets/fontawesome/css/fontawesome.min.css" />
+  <link rel="stylesheet" href="assets/fontawesome/css/brands.min.css"/>
+  <link rel="stylesheet" href="assets/fontawesome/css/solid.min.css" />
+  <link rel="stylesheet" href="assets/fontawesome/css/regular.min.css"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+      <img class="logo" alt="Logo" width="80px" src="/assets/logo.png">
+  </div>
+  
+  <div class="container">
+    <!-- Search Form -->
+    <form class="search-form" action="https://www.ecosia.org/search" method="GET">
+      <input type="text" name="q" placeholder="Search with Ecosia..." required />
+      <button type="submit">Search</button>
+    </form>
+
+    <!-- App Tiles -->
+    <div class="apps-grid" id="apps-container"></div>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+<script>
+  fetch('app.yml')
+    .then(response => response.text())
+    .then(yaml => {
+      const data = jsyaml.load(yaml);
+      data.apps.sort((a, b) => a.title.localeCompare(b.title)); // Sort alphabetically by title
+
+      const container = document.getElementById('apps-container');
+      data.apps.forEach(app => {
+        const link = document.createElement('a');
+        link.href = app.url;
+        link.className = 'app-tile';
+        link.target = '_blank';
+
+        const icon = document.createElement('div');
+        icon.className = 'app-icon';
+        icon.innerHTML = `<i class="${app.icon}"></i>`;
+
+        const content = document.createElement('div');
+        content.className = 'app-content';
+
+        const title = document.createElement('div');
+        title.className = 'app-title';
+        title.textContent = app.title;
+
+        const description = document.createElement('div');
+        description.className = 'app-description';
+        description.textContent = app.description;
+
+        content.appendChild(title);
+        content.appendChild(description);
+        link.appendChild(icon);
+        link.appendChild(content);
+        container.appendChild(link);
+      });
+    })
+    .catch(error => {
+      console.error('Error loading app.yml:', error);
+      document.getElementById('apps-container').innerHTML =
+        '<p>Failed to load app tiles. Check the console for errors.</p>';
+    });
+</script>
+</body>
+</html>

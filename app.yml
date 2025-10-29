@@ -1,0 +1,69 @@
+apps:
+  - icon: "fa fa-robot"
+    title: "ai.sp-ps.ch"
+    description: "Eine private KI. Verschiedene private Modelle und Modelle von OpenAI sind hier verfügbar."
+    url: "https://ai.sp-ps.ch"
+
+  - icon: "fa fa-language"
+    title: "Antidote"
+    description: "Eine Software zur sprachlichen Verfeinerung auf Französisch. Entsprechende Rollen erhalten Zugang."
+    url: "https://www.antidote.info/fr/"
+
+  - icon: "fa fa-list-check"
+    title: "Asana"
+    description: "View our projects"
+    url: "https://app.asana.com/-/login"
+
+  - icon: "fa fa-language"
+    title: "Deepl Pro"
+    description: "Eine KI-Übersetzungsmaschine"
+    url: "https://deepl.com"
+
+  - icon: "fa fa-circle"
+    title: Holaspirit
+    description: "Damit bilden wir unsere Organisation im Kreismodell gemäss Holokratie ab."
+    url: https://app.holaspirit.com/auth
+  - icon: "fa fa-envelope"
+    title: "maillings.sp-ps.ch"
+    description: "Newsletter versenden"
+    url: "https://mailings.sp-ps.ch/"
+  - icon: "fa fa-video"
+    title: "Jitsi Meet SP Schweiz"
+    description: "Unsere Plattform für Online-Meetings."
+    url: "https://meet.sp-ps.ch"
+  - icon: "fa fa-images"
+    title: Bilderdatenbank
+    description: "Finde Bilder von Events und Personen der SP."
+    url: "https://photos.sp-ps.ch"
+  - icon: "fa fa-database"
+    title: Avanti
+    description: "SP-Mobilisierungstool"
+    url: "https://tel.sp-ps.ch"
+  - icon: "fa fa-database"
+    title: Tocco
+    description: "Unsere Mitgliederverwaltunssoftware. Alle Infos beim Kreis Support und Personendatenmanagement."
+    url: "http://login.sp-ps.ch/tocco"
+  - icon: "fa fa-wand-magic-sparkles"
+    title: Whisper
+    description: "Du kannst damit Video und Audio transkribieren lassen und sogar Musik von gesprochenem trennen lassen."
+    url: "https://whisper.ai.sp-ps.ch/"
+  - icon: "fa fa-headset"
+    title: Support
+    description: Melde dich bei uns, wenn du ein Problem hast oder Hilfe brauchst.
+    url: "https://sp-ps.ch/support"
+  - icon: "fa fa-inbox"
+    title: Webmail
+    description: "Webmail der SP Schweiz"
+    url: "https://ch.exg7.exghost.com/owa/auth/logon.aspx"
+  - icon: "fa fa-phone"
+    title: "3CX"
+    description: "Telefonanlage mit integrierter Datenbankabfrage"
+    url: "https://meucci.3cx.ch"
+  - icon: "fa fa-users"
+    title: Mattermost
+    description: "Interne Chatanwendung"
+    url: "https://mattermost.sp-ps.ch"
+  - icon: "fa fa-file-pdf"
+    title: "PDF-Tool"
+    description: "Werkzeug um PDFs zu verändern."
+    url: "https://pdf.sp-ps.ch"
