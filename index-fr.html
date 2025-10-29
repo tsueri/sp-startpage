@@ -38,7 +38,7 @@
   <div class="container">
     <!-- Search Form -->
     <form class="search-form" action="https://www.ecosia.org/search" method="GET">
-      <input type="text" name="q" placeholder="Rechercher avec Ecosia..." required />
+      <input id="search-input" type="text" name="q" placeholder="Suchen mit Ecosia..." required autofocus />
       <button type="submit">Rechercher</button>
     </form>
 
@@ -88,6 +88,35 @@
       document.getElementById('apps-container').innerHTML =
         '<p>Failed to load app tiles. Check the console for errors.</p>';
     });
+</script>
+<!-- Ensure the search field receives focus on load (fallback for browsers/conditions where autofocus is ignored) -->
+<script>
+  (function() {
+    function focusSearch() {
+      var el = document.getElementById('search-input');
+      if (el) {
+        try {
+          el.focus();
+          // Move cursor to end for some browsers
+          var val = el.value;
+          el.value = '';
+          el.value = val;
+        } catch (e) {
+          // ignore
+        }
+      }
+    }
+
+    if (document.readyState === 'complete' || document.readyState === 'interactive') {
+      // DOM already ready
+      setTimeout(focusSearch, 0);
+    } else {
+      document.addEventListener('DOMContentLoaded', function onReady() {
+        document.removeEventListener('DOMContentLoaded', onReady);
+        focusSearch();
+      });
+    }
+  })();
 </script>
 </body>
 </html>
