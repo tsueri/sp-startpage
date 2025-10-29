@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -38,8 +38,8 @@
   <div class="container">
     <!-- Search Form -->
     <form class="search-form" action="https://www.ecosia.org/search" method="GET">
-      <input type="text" name="q" placeholder="Suchen mit Ecosia..." required />
-      <button type="submit">Suchen</button>
+      <input type="text" name="q" placeholder="Rechercher avec Ecosia..." required />
+      <button type="submit">Rechercher</button>
     </form>
 
     <!-- App Tiles -->
@@ -59,7 +59,7 @@
         const link = document.createElement('a');
         link.href = app.url;
         link.className = 'app-tile';
-        link.target = '_blank';
+        link.target = '_self';
 
         const icon = document.createElement('div');
         icon.className = 'app-icon';
@@ -74,7 +74,7 @@
 
         const description = document.createElement('div');
         description.className = 'app-description';
-        description.textContent = app.description;
+        description.textContent = app['description-fr'];
 
         content.appendChild(title);
         content.appendChild(description);

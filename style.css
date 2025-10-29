@@ -11,6 +11,44 @@ body {
     padding: 2rem;
 }
 
+
+.lang-switch {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.lang-switch ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 3px; /* Optional: space between language options */
+}
+
+.lang-switch ul li {
+  margin: 0;
+  padding: 0;
+}
+
+.lang-switch ul li:not(:last-child)::after {
+  content: " | ";
+  padding-left: 4px;
+  color: #666; /* Optional: separator color */
+}
+
+.lang-switch ul li a {
+  text-decoration: none;
+  color: inherit; /* Inherit from parent or define your own */
+  font-weight: 500;
+  padding: 4px 8px;
+  transition: color 0.2s ease;
+}
+
+.lang-switch ul li a:hover {
+  color: #0066cc; /* Optional: hover color */
+}
+
 .search-form {
     display: flex;
     gap: 0.5rem;
