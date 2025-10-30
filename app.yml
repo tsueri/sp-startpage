@@ -112,3 +112,9 @@ apps:
     description: "Webanalyse-Tool für unsere Webseiten."
     description-fr: "Outil d'analyse web pour nos sites internet."
     url: "https://matomo.spschweiz.ch"
+
+  - icon: "fa fa-thermometer"
+    title: "Status"
+    description: "Überwacht unsere Dienste und benachrichtigt uns bei Ausfällen."
+    description-fr: "Surveille nos services et nous avertit en cas de panne."
+    url: "https://status.spschweiz.ch"
