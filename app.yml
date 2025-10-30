@@ -100,3 +100,9 @@ apps:
     description: "Suche in der Geschäftsdatenbank des Schweizer Parlaments"
     description-fr: "Recherche dans la base de données des affaires du parlement suisse"
     url: "https://www.parlament.ch/de/search-affairs-advanced"
+
+  - icon: "fa fa-book"
+    title: "books.sp-sp.ch"
+    description: "Interne Wissensdatenbank"
+    description-fr: "Base de connaissances interne"
+    url: "https://books.sp-ps.ch"
