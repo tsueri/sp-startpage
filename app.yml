@@ -103,6 +103,6 @@ apps:
 
   - icon: "fa fa-book"
     title: "books.sp-sp.ch"
-    description: "Interne Wissensdatenbank"
-    description-fr: "Base de connaissances interne"
+    description: "Interne Wissensdatenbank, user Bücherregal."
+    description-fr: "Base de connaissances interne, notre bibliothèque."
     url: "https://books.sp-ps.ch"
