@@ -39,7 +39,7 @@
     <!-- Search Form -->
     <form class="search-form" action="https://www.ecosia.org/search" method="GET">
       <input id="search-input" type="text" name="q" placeholder="Suchen mit Ecosia..." required autofocus />
-      <button type="submit">Suchen</button>
+      <button type="submit">Suchen mit Ecosia</button>
     </form>
 
     <!-- App Tiles -->
@@ -60,6 +60,10 @@
         link.href = app.url;
         link.className = 'app-tile';
         link.target = '_self';
+
+        // store lowercase title/description for fast matching
+        link.dataset.title = (app.title || '').toLowerCase();
+        link.dataset.description = (app.description || '').toLowerCase();
 
         const icon = document.createElement('div');
         icon.className = 'app-icon';
@@ -82,6 +86,25 @@
         link.appendChild(content);
         container.appendChild(link);
       });
+
+      // filter function bound to the same search input
+      const searchInput = document.getElementById('search-input');
+      function filterApps() {
+        const q = searchInput.value.trim().toLowerCase();
+        const tiles = document.querySelectorAll('.app-tile');
+        tiles.forEach(tile => {
+          const title = tile.dataset.title || '';
+          const desc = tile.dataset.description || '';
+          const match = q === '' || title.includes(q) || desc.includes(q);
+          tile.style.display = match ? '' : 'none';
+        });
+      }
+
+      // live filter while typing
+      searchInput.addEventListener('input', filterApps);
+
+      // optionally filter immediately if input already has value (e.g. persisted form)
+      if (searchInput.value) filterApps();
     })
     .catch(error => {
       console.error('Error loading app.yml:', error);
