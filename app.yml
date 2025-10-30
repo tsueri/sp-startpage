@@ -106,3 +106,9 @@ apps:
     description: "Interne Wissensdatenbank, user Bücherregal."
     description-fr: "Base de connaissances interne, notre bibliothèque."
     url: "https://books.sp-ps.ch"
+
+  - icon: "fa fa-chart-line"
+    title: "Matomo"
+    description: "Webanalyse-Tool für unsere Webseiten."
+    description-fr: "Outil d'analyse web pour nos sites internet."
+    url: "https://matomo.spschweiz.ch"
