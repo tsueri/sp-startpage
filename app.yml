@@ -61,7 +61,7 @@ apps:
 
   - icon: "fa fa-wand-magic-sparkles"
     title: Whisper
-    description: "Du kannst damit Video und Audio transkribieren lassen und sogar Musik von gesprochenem trennen lassen."
+    description: "Du kannst damit Video und Audio transkribieren und sogar Musik von gesprochenem trennen lassen."
     description-fr: "Vous pouvez utiliser cela pour transcrire des vidéos et des audios, et même séparer la musique de la parole."
     url: "https://whisper.ai.sp-ps.ch/"
 
