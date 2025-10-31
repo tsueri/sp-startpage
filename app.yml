@@ -55,8 +55,8 @@ apps:
 
   - icon: "fa fa-database"
     title: Tocco
-    description: "Unsere Mitgliederverwaltunssoftware. Alle Infos beim Kreis Support und Personendatenmanagement."
-    description-fr: "Notre logiciel de gestion des membres. Toutes les informations auprès du service du cercle et de la gestion des données personnelles."
+    description: "Mitgliederverwaltunssoftware"
+    description-fr: "Logiciel de gestion des membres."
     url: "http://login.sp-ps.ch/tocco"
 
   - icon: "fa fa-wand-magic-sparkles"
